@@ -1,0 +1,28 @@
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--padding-container);
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
+
+.inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+    padding: 12px;
+    border-radius: 12px;
+    background: rgb(from var(--color-text) r g b / 5%);
+    margin-bottom: var(--padding-container);
+}
+
+.downButtons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

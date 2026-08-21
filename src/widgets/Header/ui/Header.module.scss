@@ -1,0 +1,88 @@
+.header {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--padding-container);
+    background: var(--color-item-bg);
+
+    --border-height: 3px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    height: 100%;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    padding-bottom: var(--border-height);
+}
+
+.fav {
+    color: rgb(from var(--color-text) r g b / 40%);
+    border-color: rgb(from var(--color-text) r g b / 40%);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 6px;
+
+    span {
+        color: rgb(from var(--color-text) r g b / 70%);
+    }
+}
+
+.link {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: var(--border-height);
+}
+
+.link.active {
+    border-bottom: var(--border-height) solid var(--color-accent);
+    padding-bottom: 0;
+}
+
+.widgets {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.company {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    .companyName {
+        font-weight: 600;
+        font-size: 14px;
+    }
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .action {
+        opacity: 0.4;
+        width: 24px;
+        height: 24px;
+        display: block;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .avatar {
+        background: var(--color-accent);
+    }
+}

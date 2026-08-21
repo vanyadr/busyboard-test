@@ -1,0 +1,44 @@
+.modal {
+    max-width: 420px;
+    background: var(--color-item-bg);
+    border-radius: 12px;
+    padding: var(--padding-container);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+
+    h3 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    button {
+        padding: 4px;
+        aspect-ratio: 1/1;
+    }
+}
+
+.content {
+    margin-bottom: 12px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.counter {
+    opacity: 0.6;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

@@ -1,0 +1,15 @@
+.container {
+    min-height: calc(100dvh - var(--header-height) - var(--padding-container) * 2);
+    background: var(--color-item-bg);
+    border-radius: 12px;
+    padding: var(--padding-container);
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-container);
+}
+
+.spinner {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
