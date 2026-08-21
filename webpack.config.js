@@ -70,7 +70,7 @@ module.exports = {
                     {
                         loader: 'sass-loader',
                         options: {
-                            additionalData: `@import "styles/variables/global.scss";`,
+                            additionalData: `@use "@/app/styles/variables/global.scss";`,
                         },
                     },
                 ],
