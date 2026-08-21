@@ -86,7 +86,7 @@ export const SupplyFilters = memo(({className, data}: ISupplyFiltersProps) => {
                     <Input placeholder='Комментарий' />
                 </div>
             </div>
-            <div style={{marginTop: 12, display: 'flex', gap: 8}}>
+            <div className={styles.downButtons}>
                 <Button shape='round' color='default' variant='filled'>
                     Фильтр первый
                 </Button>
