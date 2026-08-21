@@ -13,3 +13,16 @@
     justify-content: center;
     padding: 40px;
 }
+
+.subinfo {
+    display: flex;
+
+    span {
+        display: block;
+        padding: 8px;
+        border-radius: 12px 12px 0 0;
+        background: rgb(from var(--color-text) r g b / 5%);
+        border: 0.5px solid rgb(from var(--color-text) r g b / 15%);
+        font-weight: 500;
+    }
+}

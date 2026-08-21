@@ -5,6 +5,12 @@
     justify-content: space-between;
     padding: 0 var(--padding-container);
     background: var(--color-item-bg);
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
 
     --border-height: 3px;
 }

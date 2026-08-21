@@ -15,18 +15,23 @@ const SupplyFilterableTable = memo(({className}: ISupplyFilterableTableProps) =>
     const {data: supplySelect = [], isLoading: isSupplySelectLoading} = useSuppliesSelectQuery();
 
     return (
-        <div className={cn(className, styles.container)}>
-            {isLoading || isSupplySelectLoading ? (
-                <div className={styles.spinner}>
-                    <Spin size='default' />
-                </div>
-            ) : (
-                <>
-                    <SupplyFilters data={supplySelect} />
-                    <SupplyTable data={supplies} />
-                </>
-            )}
-        </div>
+        <>
+            <div className={styles.subinfo}>
+                <span>Заявки на поставку</span>
+            </div>
+            <div className={cn(className, styles.container)}>
+                {isLoading || isSupplySelectLoading ? (
+                    <div className={styles.spinner}>
+                        <Spin size='default' />
+                    </div>
+                ) : (
+                    <>
+                        <SupplyFilters data={supplySelect} />
+                        <SupplyTable data={supplies} />
+                    </>
+                )}
+            </div>
+        </>
     );
 });
 

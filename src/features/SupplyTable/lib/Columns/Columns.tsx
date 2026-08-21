@@ -1,7 +1,7 @@
 import type {ColumnsType} from 'antd/es/table';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import cn from 'classnames';
-import styles from '../ui/SupplyTable.module.scss';
+import styles from './Columns.module.scss';
 import {ISupplyItem} from '@/entities/Supply/model/supply.types';
 
 const titleWithIcon = (label: string) => (

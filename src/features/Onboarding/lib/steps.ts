@@ -9,11 +9,11 @@ export const onboardingSteps: Step[] = [
     },
     {
         target: '#onboarding-api-btn',
-        content: 'Нажмите на эту кнопку чтобы подтянуть актуальные заявки на поставку',
+        content: 'Нажмите на эту кнопку, чтобы подтянуть актуальные заявки на поставку',
     },
     {
         target: '#onboarding-create-btn',
-        content: 'Нажмите на эту кнопку чтобы создать свою собственную заявку на поставку!',
+        content: 'Супер теперь давать создадим свою собственную заявку на поставку!',
     },
     {
         target: '#onboarding-table-target',

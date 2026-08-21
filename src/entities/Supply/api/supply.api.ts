@@ -1,113 +1,13 @@
 import type {ISupplyItem, ISupplySelect} from '@/entities/Supply/model/supply.types';
-
-const SUPPLY_MOCKS: ISupplyItem[] = [
-    {
-        id: '1',
-        number: '00001',
-        date: '2026-08-01',
-        organization: 'ООО "Альфа"',
-        contractor: 'ИП Петров',
-        supplyNumber: 'SUP-00001',
-        quantity: 24,
-        status: 'accepted',
-        statusText: 'Принят без расхождений',
-        acceptanceDate: '2026-08-02',
-        deliveryTime: '2 дня',
-        amount: 154000,
-        comment: 'Без замечаний',
-    },
-    {
-        id: '2',
-        number: '00002',
-        date: '2026-08-03',
-        organization: 'ООО "Бета"',
-        contractor: 'ООО "Логистика+"',
-        supplyNumber: 'SUP-00002',
-        quantity: 10,
-        status: 'not_reserved',
-        statusText: 'Не зарезервирован',
-        acceptanceDate: '2026-08-05',
-        deliveryTime: '3 дня',
-        amount: 89000,
-        comment: 'Требуется резервирование',
-    },
-    {
-        id: '3',
-        number: '00001',
-        date: '2026-08-01',
-        organization: 'ООО "Альфа"',
-        contractor: 'ИП Петров',
-        supplyNumber: 'SUP-00001',
-        quantity: 24,
-        status: 'accepted',
-        statusText: 'Принят без расхождений',
-        acceptanceDate: '2026-08-02',
-        deliveryTime: '2 дня',
-        amount: 154000,
-        comment: 'Без замечаний',
-    },
-    {
-        id: '4',
-        number: '00002',
-        date: '2026-08-03',
-        organization: 'ООО "Бета"',
-        contractor: 'ООО "Логистика+"',
-        supplyNumber: 'SUP-00002',
-        quantity: 10,
-        status: 'not_reserved',
-        statusText: 'Не зарезервирован',
-        acceptanceDate: '2026-08-05',
-        deliveryTime: '3 дня',
-        amount: 89000,
-        comment: 'Требуется резервирование',
-    },
-    {
-        id: '5',
-        number: '00001',
-        date: '2026-08-01',
-        organization: 'ООО "Альфа"',
-        contractor: 'ИП Петров',
-        supplyNumber: 'SUP-00001',
-        quantity: 24,
-        status: 'accepted',
-        statusText: 'Принят без расхождений',
-        acceptanceDate: '2026-08-02',
-        deliveryTime: '2 дня',
-        amount: 154000,
-        comment: 'Без замечаний',
-    },
-    {
-        id: '6',
-        number: '00002',
-        date: '2026-08-03',
-        organization: 'ООО "Бета"',
-        contractor: 'ООО "Логистика+"',
-        supplyNumber: 'SUP-00002',
-        quantity: 10,
-        status: 'not_reserved',
-        statusText: 'Не зарезервирован',
-        acceptanceDate: '2026-08-05',
-        deliveryTime: '3 дня',
-        amount: 89000,
-        comment: 'Требуется резервирование',
-    },
-];
-const SUPPLY_SELECT: ISupplySelect[] = [
-    {id: 1, label: 'Все', value: 'all'},
-    {id: 2, label: 'Основной', value: 'main'},
-    {id: 3, label: 'Резервный', value: 'reserve'},
-];
-
-const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+import './supply.mock';
+import {ApiInstance} from '@/app/api';
 
 export const fetchSupplies = async (): Promise<ISupplyItem[]> => {
-    await delay(800);
-
-    return SUPPLY_MOCKS;
+    const response = await ApiInstance.get<ISupplyItem[]>('/supplies');
+    return response.data;
 };
 
 export const fetchSupplySelect = async (): Promise<ISupplySelect[]> => {
-    await delay(800);
-
-    return SUPPLY_SELECT;
+    const response = await ApiInstance.get<ISupplySelect[]>('/supplies/select');
+    return response.data;
 };

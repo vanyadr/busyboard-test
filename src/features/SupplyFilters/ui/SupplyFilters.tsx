@@ -20,13 +20,13 @@ export const SupplyFilters = memo(({className, data}: ISupplyFiltersProps) => {
             <div className={styles.buttons}>
                 <div className={styles.group}>
                     <Button type='primary'>Фильтр</Button>
-                    <Button>
+                    <Button color='default' variant='filled' className={styles.sq}>
                         <BookmarkBorderOutlinedIcon />
                     </Button>
-                    <Button>
+                    <Button color='default' variant='filled' className={styles.sq}>
                         <BackspaceOutlinedIcon />
                     </Button>
-                    <Button>
+                    <Button color='default' variant='filled' className={styles.sq}>
                         <SearchOutlinedIcon />
                     </Button>
                 </div>
@@ -39,22 +39,52 @@ export const SupplyFilters = memo(({className, data}: ISupplyFiltersProps) => {
                         <AddOutlinedIcon />
                         <span>Заявка на поставку</span>
                     </Button>
-                    <Button>
+                    <Button className={styles.sq}>
                         <SettingsOutlinedIcon />
                     </Button>
                 </div>
             </div>
             <div className={styles.inputs}>
-                <DatePicker placeholder='Дата' />
-                <Input placeholder='Контрагент' />
-                <Input placeholder='Организация' />
-                <Input placeholder='Товар' />
-                <Select placeholder='Склад' options={data} />
-                <Select placeholder='Статус' options={data} />
-                <Input placeholder='№ поставки' />
-                <Input placeholder='Комментарий' />
-                <Input placeholder='№ поставки' />
-                <Input placeholder='Комментарий' />
+                <div className={styles.input}>
+                    <label>Дата</label>
+                    <DatePicker placeholder='Дата' />
+                </div>
+                <div className={styles.input}>
+                    <label>Контрагент</label>
+                    <Input placeholder='Контрагент' />
+                </div>
+                <div className={styles.input}>
+                    <label>Организация</label>
+                    <Input placeholder='Организация' />
+                </div>
+                <div className={styles.input}>
+                    <label>Товар</label>
+                    <Input placeholder='Товар' />
+                </div>
+                <div className={styles.input}>
+                    <label>Склад</label>
+                    <Select placeholder='Склад' options={data} />
+                </div>
+                <div className={styles.input}>
+                    <label>Статус</label>
+                    <Select placeholder='Статус' options={data} />
+                </div>
+                <div className={styles.input}>
+                    <label>№ поставки</label>
+                    <Input placeholder='№ поставки' />
+                </div>
+                <div className={styles.input}>
+                    <label>Комментарий</label>
+                    <Input placeholder='Комментарий' />
+                </div>
+                <div className={styles.input}>
+                    <label>№ поставки</label>
+                    <Input placeholder='№ поставки' />
+                </div>
+                <div className={styles.input}>
+                    <label>Комментарий</label>
+                    <Input placeholder='Комментарий' />
+                </div>
             </div>
             <div style={{marginTop: 12, display: 'flex', gap: 8}}>
                 <Button shape='round' color='default' variant='filled'>

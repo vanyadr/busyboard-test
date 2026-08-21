@@ -1,0 +1,28 @@
+.columnTitle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.columnIcon {
+    color: #8c8c8c;
+}
+
+.statusBadge {
+    display: inline-block;
+    border-radius: 8px;
+    padding: 6px 16px;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.statusAccepted {
+    background: #f6ffed;
+    color: #389e0d;
+}
+
+.statusUnreserved {
+    background: #fff1f0;
+    color: #cf1322;
+}

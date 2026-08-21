@@ -45,7 +45,9 @@ const Table = <T extends Record<string, unknown>>({className, data, columns}: IT
                         setPage(1);
                         setPageSize(nextSize);
                     }}
-                    showTotal={(total, range) => `${range[0]}-${range[1]} из ${total}`}
+                    locale={{
+                        items_per_page: '',
+                    }}
                 />
             </div>
         </section>
