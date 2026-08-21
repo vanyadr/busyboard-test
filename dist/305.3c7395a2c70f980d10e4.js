@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkreact18_ts_webpack5_app=self.webpackChunkreact18_ts_webpack5_app||[]).push([[305],{3305(e,a,s){s.r(a),s.d(a,{Component:()=>p});var c=s(4848);const p=()=>(0,c.jsx)("div",{className:"pageContainer",children:(0,c.jsx)("h1",{children:"Упс! Вы ошиблись страницей :("})})}}]);
-//# sourceMappingURL=305.3c7395a2c70f980d10e4.js.map
