@@ -1,13 +1,15 @@
 import type {ColumnsType} from 'antd/es/table';
-import FilterListIcon from '@mui/icons-material/FilterList';
 import cn from 'classnames';
 import styles from './Columns.module.scss';
 import {ISupplyItem} from '@/entities/Supply/model/supply.types';
+import {FilterOutlineIcon} from '@/shared/assets/svg';
 
 const titleWithIcon = (label: string) => (
     <span className={styles.columnTitle}>
         <span>{label}</span>
-        <FilterListIcon fontSize='small' className={styles.columnIcon} />
+        <div>
+            <FilterOutlineIcon />
+        </div>
     </span>
 );
 const dateSorter = (a: string, b: string) => new Date(a).getTime() - new Date(b).getTime();

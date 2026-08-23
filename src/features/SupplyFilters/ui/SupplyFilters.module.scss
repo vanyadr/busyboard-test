@@ -8,28 +8,33 @@
 .group {
     display: flex;
     align-items: center;
-    gap: 8px;
-    height: 44px;
+    gap: 10px;
+    height: 46px;
 
     button {
-        height: 100%;
-        min-width: 150px;
+        height: 100% !important;
     }
 
     button.sq {
         min-width: 0;
-        padding: 0;
-        width: 44px;
+        padding: 11px;
+        width: 46px;
+        border-radius: var(--border-radius-small);
+    }
+
+    .btnIcon {
+        width: 20px;
+        height: 20px;
     }
 }
 
 .inputs {
     display: grid;
-    grid-template-columns: 0.75fr repeat(4, 1fr);
-    gap: 12px;
-    padding: 12px;
-    border-radius: 12px;
-    background: rgb(from var(--color-text) r g b / 5%);
+    grid-template-columns: 0.7fr repeat(4, 1fr);
+    gap: 10px;
+    padding: var(--padding-container);
+    border-radius: var(--border-radius-default);
+    background: rgb(from var(--color-grey) r g b / 27%);
     margin-bottom: var(--padding-container);
 }
 
@@ -46,5 +51,12 @@
 .downButtons {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
+    height: 32px;
+
+    button {
+        height: 100% !important;
+        width: 200px !important;
+        font-weight: 400 !important;
+    }
 }

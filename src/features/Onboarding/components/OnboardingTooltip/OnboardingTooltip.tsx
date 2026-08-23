@@ -2,7 +2,8 @@ import type {TooltipRenderProps} from 'react-joyride';
 import {memo, MouseEvent} from 'react';
 import styles from './OnboardingTooltip.module.scss';
 import {Button} from 'antd';
-import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
+import {Button as UiButton} from '@/shared/ui/Button';
+import {CloserIcon} from '@/shared/assets/svg';
 
 interface ITooltipProps extends TooltipRenderProps {
     onCloseTour: () => void;
@@ -22,7 +23,7 @@ export const OnboardingTooltip = memo(
                 <div className={styles.header}>
                     <h3>Пункт {stepIndex + 1}</h3>
                     <Button onClick={handleClose} type='text'>
-                        <CloseOutlinedIcon />
+                        <CloserIcon />
                     </Button>
                 </div>
                 <div className={styles.content}>{step.content}</div>
@@ -31,10 +32,12 @@ export const OnboardingTooltip = memo(
                         Шаг {stepIndex + 1} из {totalSteps}
                     </span>
                     <div className={styles.buttons}>
-                        <Button {...backProps}>Назад</Button>
-                        <Button {...primaryProps} type='primary'>
+                        <UiButton uiType='outline' {...backProps}>
+                            Назад
+                        </UiButton>
+                        <UiButton {...primaryProps} type='primary'>
                             Далее
-                        </Button>
+                        </UiButton>
                     </div>
                 </div>
             </div>

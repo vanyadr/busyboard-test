@@ -1,26 +1,34 @@
-import {Avatar, Button} from 'antd';
+import {Button} from 'antd';
 import {routesConfig} from '@/app/router';
 import {memo, useMemo} from 'react';
 import {NavLink, Link} from 'react-router-dom';
-import StarIcon from '@mui/icons-material/Star';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
-import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import styles from './Header.module.scss';
+import {
+    BookOpenedOutlineIcon,
+    ChevronDownIcon,
+    Logo,
+    NotificationOutlineIcon,
+    StarFillIcon,
+    UserOutlineIcon,
+} from '@/shared/assets/svg';
+import {userStore} from '@/entities/User';
 
 export const Header = memo(() => {
+    const {user} = userStore;
     const navigationItems = useMemo(() => Object.values(routesConfig).filter((item) => item.nav), []);
 
     return (
         <header className={styles.header}>
             <nav className={styles.navigation}>
                 <Link to={routesConfig.home.fullPath} className={styles.logo}>
-                    Busyboard
+                    <Logo />
                 </Link>
                 <Link to={routesConfig.favourites.fullPath}>
                     <Button className={styles.fav}>
-                        <StarIcon />
-                        <span>Избранное</span>
+                        <div>
+                            <StarFillIcon />
+                        </div>
+                        <span>{routesConfig.favourites.title}</span>
                     </Button>
                 </Link>
                 {navigationItems.map((item) => (
@@ -36,18 +44,24 @@ export const Header = memo(() => {
             <div className={styles.widgets}>
                 <div className={styles.company}>
                     <Link to={'#'} className={styles.companyName}>
-                        ГК ТУЗЕМУН
+                        {user.name}
                     </Link>
-                    <ExpandMoreIcon />
+                    <div>
+                        <ChevronDownIcon />
+                    </div>
                 </div>
                 <div className={styles.actions}>
                     <Link to={'#'} className={styles.action}>
-                        <MenuBookOutlinedIcon width={32} height={32} />
+                        <BookOpenedOutlineIcon />
                     </Link>
                     <Link to={'#'} className={styles.action}>
-                        <NotificationsNoneOutlinedIcon width={32} height={32} />
+                        <NotificationOutlineIcon />
                     </Link>
-                    <Avatar className={styles.avatar}>ГТ</Avatar>
+                    <div className={styles.avatarContainer}>
+                        <div className={styles.avatar} style={{background: user.color}}>
+                            <UserOutlineIcon />
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>

@@ -1,9 +1,17 @@
 :root {
-    --color-text: #1f1f1f;
-    --color-bg: #f5f7fa;
-    --color-accent: #1677ff;
+    --color-text: #35373A;
+    --color-bg: #F6F7FB;
+    --color-accent: #429EFF;
     --color-item-bg: #fff;
+    --color-grey: #DCE7F1;
+    --color-grey-dark: #8496AF;
+    --color-succcess: #1AB889;
+    --color-error: #FF5E5B;
+    --color-accent-dark: #007AFF;
+    --color-accent-light: #EAF5FF;
 
     --padding-container: 20px;
-    --header-height: 48px;
+    --header-height: 56px;
+    --border-radius-default: 8px;
+    --border-radius-small: 6px;
 }

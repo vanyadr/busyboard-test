@@ -80,6 +80,11 @@ module.exports = {
                 exclude: /\.module\.s[ac]ss$/i,
                 use: ['style-loader', 'css-loader', 'sass-loader'],
             },
+            {
+                test: /\.svg$/i,
+                issuer: /\.[jt]sx?$/,
+                use: ['@svgr/webpack'],
+            },
         ],
     },
     plugins: [
