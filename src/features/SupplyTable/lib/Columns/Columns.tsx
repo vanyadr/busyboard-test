@@ -55,6 +55,7 @@ const columns: ColumnsType<ISupplyItem> = [
         title: titleWithIcon('СТАТУС'),
         dataIndex: 'statusText',
         key: 'status',
+        align: 'center',
         sorter: (a, b) => a.statusText.localeCompare(b.statusText),
         render: (_, item) => (
             <span
